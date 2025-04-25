@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zolci.Controllers.Admin.UserTaskInventoryController">
+    <Button styleClass="invisible-button" text="" StackPane.alignment="CENTER" />
+    <center>
+        <AnchorPane prefHeight="600.0" prefWidth="622.0" BorderPane.alignment="CENTER">
+            <children>
+                <Text layoutX="30.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wykorzystane materiały" wrappingWidth="337.7365417480469">
+                    <font>
+                        <Font name="Ebrima Bold" size="25.0" />
+                    </font>
+                </Text>
+                <Text fx:id="welcomeText" layoutX="30.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" wrappingWidth="254.73654174804688">
+                    <font>
+                        <Font name="Ebrima Bold" size="25.0" />
+                    </font>
+                </Text>
+                <!-- Tabela z przedmiotami w magazynie -->
+                <TableView fx:id="taskInventoryTableView" layoutX="28.0" layoutY="115.0" prefHeight="415.0" prefWidth="383.0">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="50.0" text="ID" />
+                        <TableColumn fx:id="nameColumn" prefWidth="115.0" text="Nazwa" />
+                        <TableColumn fx:id="quantityColumn" prefWidth="131.0" text="Ilość" />
+                        <TableColumn fx:id="priceColumn" prefWidth="87.0" text="Cena" />
+                    </columns>
+                </TableView>
+            <Text layoutX="421.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Odpowiedzialni za zadanie" wrappingWidth="337.7365417480469">
+               <font>
+                  <Font name="Ebrima Bold" size="25.0" />
+               </font>
+            </Text>
+            <TableView fx:id="userTaskTableView" layoutX="421.0" layoutY="115.0" prefHeight="415.0" prefWidth="353.0">
+               <columns>
+                  <TableColumn fx:id="idColumn1" prefWidth="50.0" text="ID" />
+                  <TableColumn fx:id="emailColumn" prefWidth="146.0" text="Nazwa" />
+                  <TableColumn fx:id="teamColumn" prefWidth="156.0" text="Drużyna" />
+               </columns>
+            </TableView>
+            <Button layoutX="609.0" layoutY="555.0" mnemonicParsing="false" onAction="#deleteUserTask" prefHeight="25.0" prefWidth="165.0" text="Usuń przypisanie zadania" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

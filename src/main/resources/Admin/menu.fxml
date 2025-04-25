@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zolci.Controllers.Admin.AdminMenuController">
+    <left>
+        <AnchorPane prefHeight="600.0" prefWidth="153.0" style="-fx-background-color: #fcb103;" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="logoutButton" layoutX="16.0" layoutY="556.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="26.0" prefWidth="122.0" style="-fx-background-radius: 7; -fx-background-color: white;" text="Wyloguj" />
+                <Button layoutX="16.0" layoutY="156.0" mnemonicParsing="false" onAction="#usersButtonOnAction" prefHeight="26.0" prefWidth="122.0" style="-fx-background-radius: 7; -fx-background-color: white;" text="Użytkownicy" />
+                <Button layoutX="16.0" layoutY="280.0" mnemonicParsing="false" onAction="#teamButtonOnAction" prefHeight="26.0" prefWidth="122.0" style="-fx-background-radius: 7; -fx-background-color: white;" text="Druzyny" />
+                <Button layoutX="16.0" layoutY="196.0" mnemonicParsing="false" onAction="#projectsButtonOnAction" prefHeight="26.0" prefWidth="122.0" style="-fx-background-radius: 7; -fx-background-color: white;" text="Projekty" />
+                <Button layoutX="16.0" layoutY="236.0" mnemonicParsing="false" onAction="#tasksButtonOnAction" prefHeight="26.0" prefWidth="122.0" style="-fx-background-radius: 7; -fx-background-color: white;" text="Zadania" />
+                <Button layoutX="16.0" layoutY="86.0" mnemonicParsing="false" onAction="#profileButtonOnAction" prefHeight="26.0" prefWidth="122.0" style="-fx-background-radius: 7; -fx-background-color: white;" text="Profil" />
+                <ImageView fx:id="logoImage" fitHeight="58.0" fitWidth="160.0" layoutX="-5.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#logoImageClicked">
+                    <image>
+                        <Image url="@../../../../Images/logo.png" />
+                    </image>
+                </ImageView>
+            <Button layoutX="16.0" layoutY="322.0" mnemonicParsing="false" onAction="#inventoryButtonOnAction" prefHeight="26.0" prefWidth="122.0" style="-fx-background-radius: 7; -fx-background-color: white;" text="Magazyn" />
+            </children>
+        </AnchorPane>    </left>
+    <Button styleClass="invisible-button" text="" StackPane.alignment="CENTER" />
+    <center>
+        <AnchorPane prefHeight="600.0" prefWidth="666.0" BorderPane.alignment="CENTER">
+            <children>
+                <AreaChart layoutX="32.0" layoutY="368.0" prefHeight="203.0" prefWidth="279.0">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" />
+                    </yAxis>
+                </AreaChart>
+                <PieChart layoutX="325.0" layoutY="380.0" prefHeight="180.0" prefWidth="291.0" />
+                <Text fx:id="welcomeText" layoutX="343.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" wrappingWidth="254.73654174804688">
+                    <font>
+                        <Font name="Ebrima Bold" size="25.0" />
+                    </font>
+                </Text>
+                <TableView layoutX="32.0" layoutY="135.0" prefHeight="200.0" prefWidth="569.0">
+                    <columns>
+                        <TableColumn prefWidth="143.39999771118164" text="Projekt" />
+                        <TableColumn prefWidth="104.19999694824219" text="Zadanie" />
+                        <TableColumn prefWidth="97.4000244140625" text="Postęp" />
+                        <TableColumn prefWidth="108.20001220703125" text="Zespół" />
+                        <TableColumn prefWidth="122.39993286132812" text="Menadżer" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

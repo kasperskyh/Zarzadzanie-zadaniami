@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="379.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+   <AnchorPane prefHeight="86.0" prefWidth="551.0">
+      <children>
+          <Label fx:id="nameLabel" layoutX="28.0" layoutY="14.0" text="Nazwa druzynya" />
+          <Label fx:id="managerLabel" layoutX="392.0" layoutY="14.0" text="Kierownik" />
+         <Text layoutX="28.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pracownicy" />
+      </children>
+   </AnchorPane>
+   <BorderPane prefHeight="238.0" prefWidth="498.0">
+      <center>
+         <TableView fx:id="usersTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+           <columns>
+             <TableColumn fx:id="userIdColumn" prefWidth="75.0" text="Id" />
+             <TableColumn fx:id="userNameColumn" prefWidth="75.0" text="Imie" />
+               <TableColumn fx:id="userEmailColumn" prefWidth="147.20001220703125" text="Nazwisko" />
+               <TableColumn prefWidth="252.7999267578125" text="Email" />
+           </columns>
+         </TableView>
+      </center>
+   </BorderPane>
+</VBox>

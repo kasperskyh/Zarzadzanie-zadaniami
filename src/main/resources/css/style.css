@@ -1,0 +1,10 @@
+/* style.css */
+.invisible-button {
+    -fx-background-color: transparent; /* Ustawienie tła na transparentne */
+    -fx-background-radius: 0; /* Usunięcie zaokrąglenia */
+}
+
+/* Zmiana koloru tła na złoty po najechaniu */
+.invisible-button:hover {
+    -fx-background-color: gold;
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-radius: 20; -fx-border-width: 5; -fx-border-color: #B8860B;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zolci.Controllers.LoginController">
+   <left>
+      <AnchorPane prefHeight="519.0" prefWidth="306.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="1.0" prefHeight="490.0" prefWidth="325.0" style="-fx-background-color: WHITE;">
+               <children>
+                  <ImageView fx:id="logoImage" fitHeight="83.0" fitWidth="245.0" layoutX="46.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="79.0" layoutY="115.0" prefHeight="17.0" prefWidth="171.0" text="Zaloguj sie do swojego konta">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="24.0" layoutY="169.0" text="Adres email">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="26.0" layoutY="245.0" text="Haslo">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="loginButton" layoutX="26.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="40.0" prefWidth="274.0" style="-fx-background-color: GOLD; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 1, 0, 0, 0);" text="Zaloguj">
+                     <font>
+                        <Font name="Ebrima Bold" size="11.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="emailTextField" layoutX="24.0" layoutY="193.0" prefHeight="37.0" prefWidth="225.0" style="-fx-background-radius: 7; -fx-background-color: #F1F3F6;">
+                     <font>
+                        <Font name="Ebrima" size="12.0" />
+                     </font></TextField>
+                  <Button fx:id="cancelButton" layoutX="25.0" layoutY="416.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="40.0" prefWidth="274.0" style="-fx-background-color: GOLD; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 1, 0, 0, 0);" text="Zamknij">
+                     <font>
+                        <Font name="Ebrima Bold" size="11.0" />
+                     </font>
+                  </Button>
+                  <PasswordField fx:id="passwordField" layoutX="24.0" layoutY="274.0" prefHeight="37.0" prefWidth="225.0" style="-fx-background-radius: 7; -fx-background-color: #F1F3F6;">
+                     <font>
+                        <Font name="Courier New" size="12.0" />
+                     </font></PasswordField>
+                  <ImageView fx:id="logoIconImage" fitHeight="37.0" fitWidth="35.0" layoutX="268.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/email.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="passwordIconImage" fitHeight="34.0" fitWidth="33.0" layoutX="271.0" layoutY="276.0" onMouseClicked="#togglePasswordVisibility" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Images/password.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="visiblePasswordField" layoutX="24.0" layoutY="274.0" prefHeight="37.0" prefWidth="225.0" style="-fx-background-radius: 7; -fx-background-color: #F1F3F6;" visible="false">
+                     <font>
+                        <Font name="Ebrima" size="12.0" />
+                     </font>
+                  </TextField>
+                  <!-- Dodano Label do wyświetlania komunikatów błędów -->
+                  <Label fx:id="errorLabel" layoutX="24.0" layoutY="395.0" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Ebrima" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="390.0" prefWidth="472.0" style="-fx-background-color: #E0E0E0;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="koparkaImage" fitHeight="307.0" fitWidth="442.0" layoutX="11.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/koparka.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

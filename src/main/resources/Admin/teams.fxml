@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zolci.Controllers.Admin.TeamController">
+    <left>
+        <AnchorPane prefHeight="600.0" prefWidth="153.0" style="-fx-background-color: #fcb103;" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="logoutButton" layoutX="16.0" layoutY="556.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefHeight="26.0" prefWidth="122.0" style="-fx-background-radius: 7; -fx-background-color: white;" text="Wyloguj" />
+                <Button layoutX="16.0" layoutY="156.0" mnemonicParsing="false" onAction="#usersButtonOnAction" prefHeight="26.0" prefWidth="122.0" style="-fx-background-radius: 7; -fx-background-color: white;" text="Użytkownicy" />
+                <Button layoutX="16.0" layoutY="280.0" mnemonicParsing="false" onAction="#teamButtonOnAction" prefHeight="26.0" prefWidth="122.0" style="-fx-background-radius: 7; -fx-background-color: white;" text="Druzyny" />
+                <Button layoutX="16.0" layoutY="196.0" mnemonicParsing="false" onAction="#projectsButtonOnAction" prefHeight="26.0" prefWidth="122.0" style="-fx-background-radius: 7; -fx-background-color: white;" text="Projekty" />
+                <Button layoutX="16.0" layoutY="236.0" mnemonicParsing="false" onAction="#tasksButtonOnAction" prefHeight="26.0" prefWidth="122.0" style="-fx-background-radius: 7; -fx-background-color: white;" text="Zadania" />
+                <Button layoutX="16.0" layoutY="86.0" mnemonicParsing="false" onAction="#profileButtonOnAction" prefHeight="26.0" prefWidth="122.0" style="-fx-background-radius: 7; -fx-background-color: white;" text="Profil" />
+                <ImageView fx:id="logoImage" fitHeight="58.0" fitWidth="160.0" layoutX="-5.0" onMouseClicked="#logoImageClicked" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../../Images/logo.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="16.0" layoutY="322.0" mnemonicParsing="false" onAction="#inventoryButtonOnAction" prefHeight="26.0" prefWidth="122.0" style="-fx-background-radius: 7; -fx-background-color: white;" text="Magazyn" />
+            </children>
+        </AnchorPane>    </left>
+    <Button styleClass="invisible-button" text="" StackPane.alignment="CENTER" />
+    <center>
+        <AnchorPane prefHeight="600.0" prefWidth="663.0" BorderPane.alignment="CENTER">
+            <children>
+                <Text layoutX="365.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Druzyny" wrappingWidth="246.73654174804688">
+                    <font>
+                        <Font name="Ebrima Bold" size="25.0" />
+                    </font>
+                </Text>
+                <TableView fx:id="teamTableView" layoutX="28.0" layoutY="115.0" prefHeight="373.0" prefWidth="584.0">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="50.0" text="ID" />
+                        <TableColumn fx:id="nameColumn" prefWidth="235.19998168945312" text="Nazwa Druzyny" />
+                        <TableColumn fx:id="managerColumn" prefWidth="298.39996337890625" text="Kierownik" />
+                    </columns>
+                </TableView>
+                <Button layoutX="28.0" layoutY="516.0" onAction="#addTeam" text="Dodaj druzyne" />
+                <Button fx:id="editButton" layoutX="139.0" layoutY="516.0" onAction="#editTeamOnAction" text="Edytuj druzyne" />
+                <Button layoutX="255.0" layoutY="516.0" onAction="#deleteButtonOnAction" text="Usuń druzyne" />
+                <Button layoutX="518.0" layoutY="516.0" onAction="#generateReport" text="Generuj raport" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
